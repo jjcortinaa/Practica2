@@ -21,7 +21,7 @@
             speed = vehicle.GetSpeed();
             SpeedHistory.Add(speed);
         }
-        
+
         public string GetLastReading()
         {
             if (speed > legalSpeed)
@@ -33,7 +33,20 @@
                 return WriteMessage("Driving legally.");
             }
         }
+        public float GetInfractorSpeed()
+        {
+            return speed;
+        }
 
+        public float GetLegalSpeed()
+        {
+            return legalSpeed;
+        }
+
+        public string GetInfractorPlate()
+        {
+            return plate;
+        }
         public virtual string WriteMessage(string radarReading)
         {
             return $"Vehicle with plate {plate} at {speed.ToString()} km/h. {radarReading}";
