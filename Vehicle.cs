@@ -17,7 +17,10 @@
             return typeOfVehicle;
         }
 
-
+        public override string ToString()
+        {
+            return $"{GetTypeOfVehicle()}";
+        }
 
         public float GetSpeed()
         {

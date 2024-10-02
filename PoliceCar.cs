@@ -8,36 +8,44 @@
         private bool isChasing;
         private SpeedRadar speedRadar;
         private PoliceStation policeStation;
-        public PoliceCar(string plate) : base(typeOfVehicle, plate)
+        public PoliceCar(string plate, SpeedRadar radar = null) : base(typeOfVehicle, plate)
         {
             isChasing = false;
             isPatrolling = false;
-            speedRadar = new SpeedRadar();
+            speedRadar = radar;
             policeStation = new PoliceStation();
 
         }
 
         public void UseRadar(Vehicle vehicle)
-        {
-            if (isPatrolling)
+        {   if (speedRadar!=null)
             {
-                speedRadar.TriggerRadar(vehicle);
-                string meassurement = speedRadar.GetLastReading();
-                Console.WriteLine(WriteMessage($"Triggered radar. Result: {meassurement}"));
-
-                float speed = speedRadar.GetInfractorSpeed();
-                float legalSpeed = speedRadar.GetLegalSpeed();
-                string plateInfractor = speedRadar.GetInfractorPlate();
-
-                if (speed > legalSpeed)
+                if (isPatrolling)
                 {
-                    Chase(plateInfractor);
+                    speedRadar.TriggerRadar(vehicle);
+                    string meassurement = speedRadar.GetLastReading();
+                    Console.WriteLine(WriteMessage($"Triggered radar. Result: {meassurement}"));
+
+                    float speed = speedRadar.GetInfractorSpeed();
+                    float legalSpeed = speedRadar.GetLegalSpeed();
+                    string plateInfractor = speedRadar.GetInfractorPlate();
+
+                    if (speed > legalSpeed)
+                    {
+                        Chase(plateInfractor);
+                       //NotifyInfractor(policeStation,plateInfractor);
+                    }
+                }
+                else
+                {
+                    Console.WriteLine(WriteMessage($"has no active radar."));
                 }
             }
             else
             {
-                Console.WriteLine(WriteMessage($"has no active radar."));
+                Console.WriteLine(WriteMessage($"has no radar to trigger."));
             }
+                
         }
 
         public bool IsPatrolling()
@@ -73,15 +81,24 @@
 
         public void PrintRadarHistory()
         {
-            Console.WriteLine(WriteMessage("Report radar speed history:"));
-            foreach (float speed in speedRadar.SpeedHistory)
+            if (speedRadar!=null)
             {
-                Console.WriteLine(speed);
+                Console.WriteLine(WriteMessage("Report radar speed history:"));
+                foreach (float speed in speedRadar.SpeedHistory)
+                {
+                    Console.WriteLine(speed);
+                }
             }
+            else
+            {
+                Console.WriteLine(WriteMessage($"has no radar."));
+            }
+
         }
         public void NotifyInfractor(PoliceStation policeStation, string plate)
         {
-            policeStation.AlertPoliceCars(plate);
+            Console.WriteLine(WriteMessage($"Has notified the infractor with plate {plate}"));
+            policeStation.AlertPoliceCars(this, plate);
         }
 
         public void Chase(string plateInfractor)

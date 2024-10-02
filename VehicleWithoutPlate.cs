@@ -2,7 +2,7 @@
 {
     class VehicleWithoutPlate : Vehicle
     {
-        public VehicleWithoutPlate()
+        public VehicleWithoutPlate(string typeOfVehicle) : base(typeOfVehicle)
         {
         }
     }

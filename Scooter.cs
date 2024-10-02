@@ -2,7 +2,8 @@
 {
     internal class Scooter: VehicleWithoutPlate
     {
-        public Scooter()
+        private static string typeOfVehicle = "Scooter";
+        public Scooter() : base(typeOfVehicle)
         {
         }
     }

@@ -1,6 +1,6 @@
 ﻿namespace Practice1
 {
-    internal class PoliceStation
+    class PoliceStation: IMessageWritter
     {
         public List<PoliceCar> PoliceCars { get; private set; }
         private bool detectedInfractor;
@@ -12,16 +12,25 @@
 
         public void RegisterPoliceCar(PoliceCar policeCar)
         {
+            Console.WriteLine(WriteMessage($"Has registered {policeCar.ToString()}"));
             PoliceCars.Add(policeCar);
         }
 
-        public void AlertPoliceCars(string plate)
+        public void AlertPoliceCars(PoliceCar policeWhichAlerted, string plate)
         {
             detectedInfractor = true;
             foreach (PoliceCar policeCar in PoliceCars)
             {
-                policeCar.Chase(plate);
+                if (policeCar.IsPatrolling() == true && policeCar!=policeWhichAlerted)
+                {
+                    policeCar.Chase(plate);
+                }
+               
             }
+        }
+        public virtual string WriteMessage(string message)
+        {
+            return $"Police station {message}";
         }
     }
 }
