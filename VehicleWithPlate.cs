@@ -12,7 +12,7 @@
         public override string ToString()
         {
             return $"{GetTypeOfVehicle()} with plate {GetPlate()}";
-        }
+        }   
         public string GetPlate()
         {
             return plate;

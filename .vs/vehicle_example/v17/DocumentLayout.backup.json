@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{BF901D8A-3988-4752-95C0-1E096290AB1F}|Practice1.csproj|solutionrelative:main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{BF901D8A-3988-4752-95C0-1E096290AB1F}|Practice1.csproj|c:\\users\\jose juan\\documents\\icai\\imat_3\\paradigmas\\practica2_git\\policecar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF901D8A-3988-4752-95C0-1E096290AB1F}|Practice1.csproj|solutionrelative:policecar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BF901D8A-3988-4752-95C0-1E096290AB1F}|Practice1.csproj|c:\\users\\jose juan\\documents\\icai\\imat_3\\paradigmas\\practica2_git\\policestation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BF901D8A-3988-4752-95C0-1E096290AB1F}|Practice1.csproj|solutionrelative:policestation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -31,10 +35,6 @@
       "RelativeMoniker": "D:0:0:{BF901D8A-3988-4752-95C0-1E096290AB1F}|Practice1.csproj|solutionrelative:vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BF901D8A-3988-4752-95C0-1E096290AB1F}|Practice1.csproj|c:\\users\\jose juan\\documents\\icai\\imat_3\\paradigmas\\practica2_git\\policecar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF901D8A-3988-4752-95C0-1E096290AB1F}|Practice1.csproj|solutionrelative:policecar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BF901D8A-3988-4752-95C0-1E096290AB1F}|Practice1.csproj|c:\\users\\jose juan\\documents\\icai\\imat_3\\paradigmas\\practica2_git\\speedradar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BF901D8A-3988-4752-95C0-1E096290AB1F}|Practice1.csproj|solutionrelative:speedradar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -50,11 +50,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "City.cs",
               "DocumentMoniker": "C:\\Users\\Jose Juan\\Documents\\ICAI\\IMAT_3\\Paradigmas\\Practica2_git\\City.cs",
               "RelativeDocumentMoniker": "City.cs",
@@ -67,7 +67,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Taxi.cs",
               "DocumentMoniker": "C:\\Users\\Jose Juan\\Documents\\ICAI\\IMAT_3\\Paradigmas\\Practica2_git\\Taxi.cs",
               "RelativeDocumentMoniker": "Taxi.cs",
@@ -81,19 +81,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "IMessageWritter.cs",
-              "DocumentMoniker": "C:\\Users\\Jose Juan\\Documents\\ICAI\\IMAT_3\\Paradigmas\\Practica2_git\\IMessageWritter.cs",
-              "RelativeDocumentMoniker": "IMessageWritter.cs",
-              "ToolTip": "C:\\Users\\Jose Juan\\Documents\\ICAI\\IMAT_3\\Paradigmas\\Practica2_git\\IMessageWritter.cs",
-              "RelativeToolTip": "IMessageWritter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T10:43:16.114Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "VehicleWithoutPlate.cs",
               "DocumentMoniker": "C:\\Users\\Jose Juan\\Documents\\ICAI\\IMAT_3\\Paradigmas\\Practica2_git\\VehicleWithoutPlate.cs",
               "RelativeDocumentMoniker": "VehicleWithoutPlate.cs",
@@ -119,20 +106,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "PoliceStation.cs",
               "DocumentMoniker": "C:\\Users\\Jose Juan\\Documents\\ICAI\\IMAT_3\\Paradigmas\\Practica2_git\\PoliceStation.cs",
               "RelativeDocumentMoniker": "PoliceStation.cs",
               "ToolTip": "C:\\Users\\Jose Juan\\Documents\\ICAI\\IMAT_3\\Paradigmas\\Practica2_git\\PoliceStation.cs",
               "RelativeToolTip": "PoliceStation.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAkwCAAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-01T10:25:08.376Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PoliceCar.cs",
+              "DocumentMoniker": "C:\\Users\\Jose Juan\\Documents\\ICAI\\IMAT_3\\Paradigmas\\Practica2_git\\PoliceCar.cs",
+              "RelativeDocumentMoniker": "PoliceCar.cs",
+              "ToolTip": "C:\\Users\\Jose Juan\\Documents\\ICAI\\IMAT_3\\Paradigmas\\Practica2_git\\PoliceCar.cs",
+              "RelativeToolTip": "PoliceCar.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwC0AAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T10:24:10.765Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "IMessageWritter.cs",
+              "DocumentMoniker": "C:\\Users\\Jose Juan\\Documents\\ICAI\\IMAT_3\\Paradigmas\\Practica2_git\\IMessageWritter.cs",
+              "RelativeDocumentMoniker": "IMessageWritter.cs",
+              "ToolTip": "C:\\Users\\Jose Juan\\Documents\\ICAI\\IMAT_3\\Paradigmas\\Practica2_git\\IMessageWritter.cs",
+              "RelativeToolTip": "IMessageWritter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T10:43:16.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Vehicle.cs",
               "DocumentMoniker": "C:\\Users\\Jose Juan\\Documents\\ICAI\\IMAT_3\\Paradigmas\\Practica2_git\\Vehicle.cs",
               "RelativeDocumentMoniker": "Vehicle.cs",
@@ -141,19 +154,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-01T10:24:13.501Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PoliceCar.cs",
-              "DocumentMoniker": "C:\\Users\\Jose Juan\\Documents\\ICAI\\IMAT_3\\Paradigmas\\Practica2_git\\PoliceCar.cs",
-              "RelativeDocumentMoniker": "PoliceCar.cs",
-              "ToolTip": "C:\\Users\\Jose Juan\\Documents\\ICAI\\IMAT_3\\Paradigmas\\Practica2_git\\PoliceCar.cs",
-              "RelativeToolTip": "PoliceCar.cs",
-              "ViewState": "AgIAAG0AAAAAAAAAAAAAAGMAAABeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T10:24:10.765Z",
               "EditorCaption": ""
             },
             {
