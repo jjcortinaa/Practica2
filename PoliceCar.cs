@@ -8,12 +8,12 @@
         private bool isChasing;
         private SpeedRadar speedRadar;
         private PoliceStation policeStation;
-        public PoliceCar(string plate, SpeedRadar radar = null) : base(typeOfVehicle, plate)
+        public PoliceCar(PoliceStation policeStation, string plate, SpeedRadar radar = null) : base(typeOfVehicle, plate)
         {
             isChasing = false;
             isPatrolling = false;
             speedRadar = radar;
-            policeStation = new PoliceStation();
+            this.policeStation = policeStation;
 
         }
 
@@ -33,7 +33,7 @@
                     if (speed > legalSpeed)
                     {
                         Chase(plateInfractor);
-                       //NotifyInfractor(policeStation,plateInfractor);
+                        NotifyInfractor(policeStation,plateInfractor);
                     }
                 }
                 else

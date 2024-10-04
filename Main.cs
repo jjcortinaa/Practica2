@@ -5,12 +5,16 @@
 
         static void Main()
         {
+            City city = new City("Madrid");
+
+            PoliceStation policeStation = city.CreatePoliceStation();
+
             SpeedRadar speedRadarp1 = new SpeedRadar();
             SpeedRadar speedRadarp2 = new SpeedRadar();
             Taxi taxip1 = new Taxi("0001 AAA");
             Taxi taxip2 = new Taxi("0002 BBB");
-            PoliceCar policeCarp1 = new PoliceCar("0001 CNP", speedRadarp1);
-            PoliceCar policeCarp2 = new PoliceCar("0002 CNP", speedRadarp2);
+            PoliceCar policeCarp1 = new PoliceCar(policeStation, "0001 CNP", speedRadarp1);
+            PoliceCar policeCarp2 = new PoliceCar(policeStation, "0002 CNP", speedRadarp2);
 
             Console.WriteLine(taxip1.WriteMessage("Created"));
             Console.WriteLine(taxip2.WriteMessage("Created"));
@@ -38,11 +42,6 @@
             policeCarp1.PrintRadarHistory();
             policeCarp2.PrintRadarHistory();
 
-
-            City city = new City("Madrid");
-
-            PoliceStation policeStation = city.CreatePoliceStation();
-
             Taxi taxi1 = new Taxi("0001 AAA");
             Taxi taxi2 = new Taxi("0002 BBB");
 
@@ -55,9 +54,9 @@
             SpeedRadar speedRadar2 = new SpeedRadar();
             SpeedRadar speedRadar3 = new SpeedRadar();
 
-            PoliceCar policeCarWithNoRadar = new PoliceCar("0001 CNP");
-            PoliceCar policeCar2 = new PoliceCar("0002 CNP",speedRadar2);
-            PoliceCar policeCar3 = new PoliceCar("0003 CNP", speedRadar3);
+            PoliceCar policeCarWithNoRadar = new PoliceCar(policeStation, "0001 CNP");
+            PoliceCar policeCar2 = new PoliceCar(policeStation, "0002 CNP",speedRadar2);
+            PoliceCar policeCar3 = new PoliceCar(policeStation, "0003 CNP", speedRadar3);
 
             Console.WriteLine(policeCarWithNoRadar.WriteMessage("Created"));
             Console.WriteLine(policeCar2.WriteMessage("Created"));
@@ -76,8 +75,7 @@
             policeCar2.StartPatrolling();
             policeCar3.StartPatrolling();
             policeCar2.UseRadar(taxi2);
-            policeCar2.NotifyInfractor(policeStation, taxi2.GetPlate());
-
+            
             city.RemoveLicense(taxi2);
 
         }
